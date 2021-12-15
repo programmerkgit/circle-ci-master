@@ -1,0 +1,14 @@
+# version
+version: 2.1
+# jobs: circle ci is auto job tools.
+# build is one of job
+#
+jobs:
+  # name of job
+  this_job_is_my_job:
+    # executor[docker|machine|macos|windows]
+    docker:
+      - image: circleci/node:4.8.2 # Image to use
+    steps:
+      - checkout # check out the code in the project directory
+      - run: echo "hello world" # run the `echo` command
